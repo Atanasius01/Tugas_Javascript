@@ -1,0 +1,69 @@
+<script>
+  //Persegi Panjang
+  //Diketahui Persegi Panjang memiliki Panjang dan Lebar
+
+  var panjangPP = 10;
+  var lebarPP = 20;
+
+  // Rumus Luas Persegi panjang = Panjang * Lebar
+  let luas_persegi_panjang = panjangPP * lebarPP;
+  // Rumus Keliling Persegi Panjang = 2 * (Panjang+Lebar)
+  let keliling_persegi_panjang = 2 * (panjangPP + lebarPP);
+
+  // Menampilkan dan memanggil hasil perhitungan rumus
+  document.write("PERHITUNGAN RUMUS PERSEGI PANJANG <br>");
+  document.write("Diketahui : <br> Panjang = 10 cm <br> Lebar = 20 cm <br>");
+  document.write(
+    "Keliling Persegi Panjang = " + keliling_persegi_panjang + " cm <br>"
+  );
+  document.write(
+    "Luas Persegi Panjang = " + luas_persegi_panjang + " cm <sup>2</sup> <br>"
+  ); // <sup> digunakan untuk membuat angka menjadi pangkat atau berada di atas.
+
+  document.write("<hr/>");
+
+  //Segitiga
+  //Diketahui segitiga memiliki Alas, Tinggi dan Sisi
+
+  // Deklarasi nilai dari variabel alas_segitiga dan tinggi_segitiga
+  var alas_segitiga = 8;
+  var tinggi_segitiga = 10;
+
+  //Rumus mencari sisi samping segitiga dan keliling segitiga
+  let setengah_alas = alas_segitiga * 0.5;
+  let mencari_sisi = Math.pow(setengah_alas, 2) + Math.pow(tinggi_segitiga, 2);
+  let keliling_segitiga = Math.sqrt(mencari_sisi) * 2 + alas_segitiga;
+
+  // Rumus luas segitiga = alas * tinggi * 1/2
+  let luas_segitiga = alas_segitiga * tinggi_segitiga * 0.5;
+
+  // Menampilkan dan memanggil hasil perhitungan
+  document.write("PERHITUNGAN RUMUS SEGITIGA <br>");
+  document.write("Diketahui : <br> Alas = 8 cm <br> Tinggi = 10 cm <br>");
+  document.write("Luas Segitiga = " + luas_segitiga + " cm <sup>2</sup>");
+  document.write("<br> Keliling Segitiga = " + keliling_segitiga + " cm");
+  document.write("<hr/>");
+
+  // Jajar Genjang
+  // Diketahui jajar genjang memiliki Alas, Sisi Samping dan Tinggi
+
+  var tinggi_JG = 5;
+  var alas_JG = 8;
+  const sisi_jg = 6.5;
+
+  // Rumus menghitung keliling dan luas Jajar Genjang
+  let luas_jajar_genjang = alas_JG * tinggi_JG;
+  let keliling_jajar_genjang = 2 * (alas_JG + sisi_jg);
+
+  document.write("PERHITUNGAN RUMUS JAJAR GENJANG <br>");
+  document.write(
+    "Diketahui : <br> Alas = 8 cm <br> Tinggi = 5 cm <br> Sisi = 6.5 cm<br>"
+  );
+  document.write(
+    "Luas Jajar Genjang = " + luas_jajar_genjang + " cm <sup>2</sup>"
+  );
+  document.write(
+    "<br> Keliling Jajar Genjang = " + keliling_jajar_genjang + " cm"
+  );
+  document.write("<hr/>");
+</script>
