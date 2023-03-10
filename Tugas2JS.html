@@ -1,0 +1,56 @@
+<script>
+  // Input nilai variabel
+  let nama_pegawai = "Atanasius Jales Putra Bagaskara";
+  let status = "Belum Menikah";
+  let jabatan = "Manager";
+
+  //Pengkondisian Gaji
+  let gaji_pokok = "";
+  if (jabatan == "Manager") gaji_pokok = 10000000;
+  else if (jabatan == "Asisten Manager") gaji_pokok = 8000000;
+  else if (jabatan == "Asisten Staff") gaji_pokok = 5000000;
+  else gaji_pokok = "";
+
+  //Penghitungan tunjangan jabatan sebesar 10%
+  tunjangan_jabatan = gaji_pokok * 0.1;
+
+  //Pengkondisian status untuk tunjangan keluarga bagi menikah 10%
+  tunjangan_keluarga = "0";
+  switch (status) {
+    case "Menikah":
+      tunjangan_keluarga = gaji_pokok * 0.1;
+      break;
+    case "Belum Menikah":
+      tunjangan_keluarga = 0;
+      break;
+    default:
+      tunjangan_keluarga = 0;
+  }
+  //Penghitungan Hasil BPJS sesuai dengan gaji jabatan
+  let bpjs = gaji_pokok * 0.1;
+
+  //Penghitungan total gaji dengan menjumlahkan gaji pokok beserta tunjangan
+  let total_gaji = gaji_pokok + bpjs + tunjangan_jabatan + tunjangan_keluarga;
+
+  // Pemanggilan dan penampilan output
+  document.write(
+    "<b> Data Gaji Pegawai </b>" +
+      " <br> Nama Pegawai : " +
+      nama_pegawai +
+      " <br> Jabatan : " +
+      jabatan +
+      " <br> Status : " +
+      status +
+      "<br> Gaji Pokok : Rp." +
+      gaji_pokok +
+      "<br> BPJS : Rp." +
+      bpjs +
+      "<br> Tunjangan Keluarga : Rp." +
+      tunjangan_keluarga +
+      "<br> Tunjangan Jabatan : Rp." +
+      tunjangan_jabatan +
+      "<hr/>" +
+      "<br> Total Pendapatan (Gaji) : Rp." +
+      total_gaji
+  );
+</script>
