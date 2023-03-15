@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+  </head>
+  <style>
+    .kalku {
+      margin: 250px auto;
+      width: 400px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: lightblue;
+      border-radius: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    table {
+      margin-left: 50px;
+      margin-top: -50px;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: beige;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+    }
+    button {
+      background-color: antiquewhite;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="kalku">
+      <form id="kalkulator">
+        <h2>Kalkulator Sederhana</h2>
+        <table>
+          <tr>
+            <td><label>Angka 1 :</label></td>
+            <td>
+              <input type="text" name="angka" placeholder="Masukkan angka1" />
+            </td>
+            <br />
+          </tr>
+          <tr>
+            <td><label> Angka 2 :</label></td>
+            <td>
+              <input type="text" name="angka2" placeholder="Masukkan angka2" />
+            </td>
+            <br />
+          </tr>
+          <tr>
+            <td><label> Hasil</label></td>
+            <td><input type="text" name="hasil" disabled /></td>
+            <br />
+          </tr>
+          <br />
+          <tr>
+            <td>
+              <button type="button" name="btn_tambah" onclick="tambah()">
+                +
+              </button>
+              <button type="button" name="btn_kurang" onclick="kurang()">
+                -
+              </button>
+              <button type="button" name="btn_kali" onclick="kali()">*</button>
+              <button type="button" name="btn_bagi" onclick="bagi()">/</button>
+              <button type="button" name="btn_pangkat" onclick="pangkat()">
+                ^
+              </button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <footer>
+      <p>Created by &copy; Atanasius | Kalkulator Sederhana</p>
+    </footer>
+
+    <script src="js/kalkulator.js"></script>
+  </body>
+</html>
