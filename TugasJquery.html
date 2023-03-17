@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas JQUERY</title>
+    <script src="js/jquery-3.6.4.js"></script>
+  </head>
+  <style>
+    body {
+      background-color: aliceblue;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      justify-content: center;
+      margin: 2rem 2rem;
+      cursor: pointer;
+    }
+
+    img:hover {
+      background-color: antiquewhite;
+    }
+    div {
+      margin-top: 5rem;
+      text-align: center;
+    }
+
+    footer {
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: antiquewhite;
+    }
+
+    button {
+      padding: 20px;
+      border: 3px rgb(77, 76, 76) solid;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: antiquewhite;
+    }
+  </style>
+  <body>
+    <div>
+      <h2>PILIH GAMBAR KARAKTER MARVEL</h2>
+      <img src="img/21.jpg" alt="" id="muncul_hilang" class="tampil" />
+      <img src="img/31.jpg" alt="" id="muncul_hilang2" class="tampil" />
+      <img src="img/41.jpg" alt="" id="muncul_hilang3" class="tampil" />
+      <img src="img/51.jpg" alt="" id="muncul_hilang4" class="tampil" />
+      <img src="img/11.jpg" alt="" id="muncul_hilang5" class="tampil" />
+      <br /><br />
+      <button id="button-tampil">Tampilkan Gambar</button>
+      <button id="hide-all">Hide Semua</button>
+      <!-- <button onclick="window.location.reload()">Tampilkan Gambar</button> -->
+    </div>
+
+    <footer>
+      <p>Created by &copy; Atanasius Jales Putra Bagaskara || Tugas Jquery</p>
+    </footer>
+    <script>
+      $(document).ready(function () {
+        $("#muncul_hilang").click(function () {
+          $("#muncul_hilang").hide();
+        });
+        $("#muncul_hilang2").click(function () {
+          $("#muncul_hilang2").toggle();
+        });
+        $("#muncul_hilang3").click(function () {
+          $("#muncul_hilang3").toggle();
+        });
+        $("#muncul_hilang4").click(function () {
+          $("#muncul_hilang4").toggle();
+        });
+        $("#muncul_hilang5").click(function () {
+          $("#muncul_hilang5").toggle();
+        });
+        $("#button-tampil").click(function () {
+          $(".tampil").show(200);
+        });
+        $("#hide-all").click(function () {
+          $(".tampil").hide(200);
+        });
+      });
+    </script>
+  </body>
+</html>
